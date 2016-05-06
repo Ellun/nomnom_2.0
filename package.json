@@ -1,0 +1,26 @@
+{
+  "name": "nomnom_2.0",
+  "version": "1.0.0",
+  "description": "Revamp of Project nomnom with new technologies",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ellun/nomnom_2.0.git"
+  },
+  "author": "Elton Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ellun/nomnom_2.0/issues"
+  },
+  "homepage": "https://github.com/Ellun/nomnom_2.0#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  }
+}
