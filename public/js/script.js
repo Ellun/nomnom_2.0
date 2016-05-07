@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, Navigation, Link, browserHistory} from 'react-router';
-
-import Input from './components/input';
-import Button from './components/button';
+import Login from './components/login';
+import Signup from './components/signup';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <Input placeholder='hello world' />
-        <Button btnName='submit' />
+        {this.props.children}
       </div>
     )
   }
@@ -18,8 +16,9 @@ export default class App extends Component {
 
 const routes = (
   <Router history={browserHistory}>
-    <Route path="/" component={App} >
-    </Route>
+    <Route path="/" component={App} />
+    <Route path="/login" component={Login} />
+    <Route path="/signup" component={Signup} />
   </Router>
 )
 
