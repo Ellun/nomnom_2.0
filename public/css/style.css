@@ -30,4 +30,12 @@ body {
   height: 15%;
   border: 1px solid #000333;
   margin: 1%;
+  font-size: 200%;
+}
+
+.submitBtn {
+  margin: 1%;
+  border: 1px solid #000333;
+  width: 40%;
+  border-radius: 5px;
 }
