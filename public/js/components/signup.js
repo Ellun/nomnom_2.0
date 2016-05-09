@@ -15,7 +15,6 @@ export default class Signup extends Component {
     const username = this.refs.username.value;
     const password = this.refs.password.value;
     const confirmPass = this.refs.confirmPass.value;
-
     if (password != confirmPass) {
       this.setState({error: 'Passwords did not match'})
     } else {
@@ -24,21 +23,33 @@ export default class Signup extends Component {
         password: password
       })
       .done((data) => {
-        if (data.agent == 'error') {
-          this.setState({error: 'that user already exists'})
-        } else {
-          $.post('/users/login',{ // AJAX post request to users/login route
-            username: username,
-            password: password
-          })
-          .done((data) => {
-            localStorage.token = data.token;
-            this.context.setLoggedInTrue(true);
-            this.context.router.replace('/home')
-          })
-        }
-      }
+        console.log('awesome');
+      })
     }
+  }
+
+    // else {
+  //     $.post('/users/signup', {
+  //       username: username,
+  //       password: password
+  //     })
+  //     .done((data) => {
+  //       if (data.agent == 'error') {
+  //         this.setState({error: 'that user already exists'})
+  //       } else {
+  //         $.post('/users/login',{ // AJAX post request to users/login route
+  //           username: username,
+  //           password: password
+  //         })
+  //         .done((data) => {
+  //           localStorage.token = data.token;
+  //           this.context.setLoggedInTrue(true);
+  //           this.context.router.replace('/home');
+  //         })
+  //       }
+  //     }
+  //   }
+  // }
 
   render() {
     return (
