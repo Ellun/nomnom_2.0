@@ -4,9 +4,12 @@ const path    = require ( 'path' );
 const port    = 3000;
 
 const app = express (); // initiates express
+const userRoutes = require(path.join( __dirname, '/routes/users'));
 app.use(logger ('dev') ); // logger for res/req
 
 app.use(express.static(path.join(__dirname, 'public'))); // allows us to access public folder
+
+app.use('/users', userRoutes);
 
 app.get('*',(req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html')) // directs to index.html page
