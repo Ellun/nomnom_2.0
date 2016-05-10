@@ -13,5 +13,5 @@ app.get( '/' , ( req, res ) => {
 })
 
 app.listen( port, () => { // listens for port
-  console.log( 'Ayyyeeeeeee Sexyyy Lady! ', port ); //Gangnam Style
+  console.log( 'Ayyyeeeeeee Sexyyy Lady! Hi Elton! ', port ); //Gangnam Style
 });
